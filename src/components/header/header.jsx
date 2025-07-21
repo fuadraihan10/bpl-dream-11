@@ -45,9 +45,9 @@ function Header() {
       {/* -----------Banner----------- */}
       <div className=' bg-black max-w-screen-2xl mx-auto rounded-3xl relative overflow-hidden'>
         <div className='absolute inset-0 md:gap-3 gap-1 flex flex-col items-center justify-center z-10 text-white'>
-         <img className='w-32 md:w-64' src={bannner} alt="criket" />
-         <p className='text-xl lg:text-4xl font-bold'>Assemble Your Ultimate Dream 11 Cricket Team</p>
-         <p className='text-md md:text-2xl semibold text-gray-400'>Beyond Boundaries Beyond Limits</p>
+         <img className='w-20 md:w-64' src={bannner} alt="criket" />
+         <p className='text-md lg:text-4xl font-bold'>Assemble Your Ultimate Dream 11 Cricket Team</p>
+         <p className='text-sm md:text-2xl semibold text-gray-400'>Beyond Boundaries Beyond Limits</p>
          <button onClick={handleClaimFreeCredit} className="bg-yellow-300 text-black sm:py-2 sm:px-4 py-1 px-2 rounded">Claim Free Credit</button>
 
         </div>

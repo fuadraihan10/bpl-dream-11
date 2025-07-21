@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "cricketer_name": "Virat Kohli",
+    "player_image": "https://i.guim.co.uk/img/media/90f3d9d62e357b22062397771403e115ec6e0f53/804_287_2486_1988/master/2486.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=55620d64ae0f9ae6918a3b7528ebf841",
+    "country": "India",
+    "role": "Batsman",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "right-hand-medium",
+      "price": 1200000
+    }
+  },
+  {
+    "id": 2,
+    "cricketer_name": "Babar Azam",
+    "player_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiksfxnjNJLeG5Rsg0i6rZgHWo4YQHSlknoQ&s",
+    "country": "Pakistan",
+    "role": "Batsman",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "right-hand-spin",
+      "price": 1100000
+    }
+  },
+  {
+    "id": 3,
+    "cricketer_name": "Ben Stokes",
+    "player_image": "https://m.greaterkashmir.com/sortd-service/imaginary/v22-01/jpg/large/high?url=Z3JlYXRlcmthc2htaXItc29ydGQtcHJvLXByb2Qtc29ydGQvbWVkaWE0MWFhYzhiMC1mOWY1LTExZWYtYjVlNS0wMTRlNTY0NzI4MmUuanBn",
+    "country": "England",
+    "role": "All-Rounder",
+    "rating": {
+      "batting_hand": "left-hand",
+      "bowling_hand": "right-hand-fast",
+      "price": 1500000
+    }
+  },
+  {
+    "id": 4,
+    "cricketer_name": "Kane Williamson",
+    "player_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ55peCy8P2QW1l0LpEm-Z3V4AttWjf4e2kg&s",
+    "country": "New Zealand",
+    "role": "Batsman",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "right-hand-offbreak",
+      "price": 1050000
+    }
+  },
+  {
+    "id": 5,
+    "cricketer_name": "Steve Smith",
+    "player_image": "https://i.guim.co.uk/img/media/90f3d9d62e357b22062397771403e115ec6e0f53/804_287_2486_1988/master/2486.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=55620d64ae0f9ae6918a3b7528ebf841",
+    "country": "Australia",
+    "role": "Batsman",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "right-hand-legbreak",
+      "price": 1150000
+    }
+  },
+  {
+    "id": 6,
+    "cricketer_name": "Joe Root",
+    "player_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiksfxnjNJLeG5Rsg0i6rZgHWo4YQHSlknoQ&s",
+    "country": "England",
+    "role": "Batsman",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "right-hand-offbreak",
+      "price": 1000000
+    }
+  },
+  {
+    "id": 7,
+    "cricketer_name": "Rashid Khan",
+    "player_image": "https://m.greaterkashmir.com/sortd-service/imaginary/v22-01/jpg/large/high?url=Z3JlYXRlcmthc2htaXItc29ydGQtcHJvLXByb2Qtc29ydGQvbWVkaWE0MWFhYzhiMC1mOWY1LTExZWYtYjVlNS0wMTRlNTY0NzI4MmUuanBn",
+    "country": "Afghanistan",
+    "role": "Bowler",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "right-hand-legbreak",
+      "price": 900000
+    }
+  },
+  {
+    "id": 8,
+    "cricketer_name": "Jasprit Bumrah",
+    "player_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ55peCy8P2QW1l0LpEm-Z3V4AttWjf4e2kg&s",
+    "country": "India",
+    "role": "Bowler",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "right-hand-fast",
+      "price": 950000
+    }
+  },
+  {
+    "id": 9,
+    "cricketer_name": "Shaheen Afridi",
+    "player_image": "https://i.guim.co.uk/img/media/90f3d9d62e357b22062397771403e115ec6e0f53/804_287_2486_1988/master/2486.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=55620d64ae0f9ae6918a3b7528ebf841",
+    "country": "Pakistan",
+    "role": "Bowler",
+    "rating": {
+      "batting_hand": "left-hand",
+      "bowling_hand": "left-hand-fast",
+      "price": 880000
+    }
+  },
+  {
+    "id": 10,
+    "cricketer_name": "Quinton de Kock",
+    "player_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiksfxnjNJLeG5Rsg0i6rZgHWo4YQHSlknoQ&s",
+    "country": "South Africa",
+    "role": "Wicketkeeper-Batsman",
+    "rating": {
+      "batting_hand": "left-hand",
+      "bowling_hand": "none",
+      "price": 920000
+    }
+  },
+  {
+    "id": 11,
+    "cricketer_name": "David Warner",
+    "player_image": "https://m.greaterkashmir.com/sortd-service/imaginary/v22-01/jpg/large/high?url=Z3JlYXRlcmthc2htaXItc29ydGQtcHJvLXByb2Qtc29ydGQvbWVkaWE0MWFhYzhiMC1mOWY1LTExZWYtYjVlNS0wMTRlNTY0NzI4MmUuanBn",
+    "country": "Australia",
+    "role": "Batsman",
+    "rating": {
+      "batting_hand": "left-hand",
+      "bowling_hand": "right-hand-legbreak",
+      "price": 980000
+    }
+  },
+  {
+    "id": 12,
+    "cricketer_name": "Rohit Sharma",
+    "player_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ55peCy8P2QW1l0LpEm-Z3V4AttWjf4e2kg&s",
+    "country": "India",
+    "role": "Batsman",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "right-hand-offbreak",
+      "price": 1080000
+    }
+  },
+  {
+    "id": 13,
+    "cricketer_name": "Pat Cummins",
+    "player_image": "https://i.guim.co.uk/img/media/90f3d9d62e357b22062397771403e115ec6e0f53/804_287_2486_1988/master/2486.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=55620d64ae0f9ae6918a3b7528ebf841",
+    "country": "Australia",
+    "role": "Bowler",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "right-hand-fast",
+      "price": 850000
+    }
+  },
+  {
+    "id": 14,
+    "cricketer_name": "Trent Boult",
+    "player_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiksfxnjNJLeG5Rsg0i6rZgHWo4YQHSlknoQ&s",
+    "country": "New Zealand",
+    "role": "Bowler",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "left-hand-fast-medium",
+      "price": 800000
+    }
+  },
+  {
+    "id": 15,
+    "cricketer_name": "Shakib Al Hasan",
+    "player_image": "https://m.greaterkashmir.com/sortd-service/imaginary/v22-01/jpg/large/high?url=Z3JlYXRlcmthc2htaXItc29ydGQtcHJvLXByb2Qtc29ydGQvbWVkaWE0MWFhYzhiMC1mOWY1LTExZWYtYjVlNS0wMTRlNTY0NzI4MmUuanBn",
+    "country": "Bangladesh",
+    "role": "All-Rounder",
+    "rating": {
+      "batting_hand": "left-hand",
+      "bowling_hand": "left-hand-orthodox",
+      "price": 1300000
+    }
+  },
+  {
+    "id": 16,
+    "cricketer_name": "Faf du Plessis",
+    "player_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ55peCy8P2QW1l0LpEm-Z3V4AttWjf4e2kg&s",
+    "country": "South Africa",
+    "role": "Batsman",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "right-hand-legbreak",
+      "price": 870000
+    }
+  },
+  {
+    "id": 17,
+    "cricketer_name": "Jos Buttler",
+    "player_image": "https://i.guim.co.uk/img/media/90f3d9d62e357b22062397771403e115ec6e0f53/804_287_2486_1988/master/2486.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=55620d64ae0f9ae6918a3b7528ebf841",
+    "country": "England",
+    "role": "Wicketkeeper-Batsman",
+    "rating": {
+      "batting_hand": "right-hand",
+      "bowling_hand": "none",
+      "price": 1020000
+    }
+  },
+  {
+    "id": 18,
+    "cricketer_name": "Mitchell Starc",
+    "player_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiksfxnjNJLeG5Rsg0i6rZgHWo4YQHSlknoQ&s",
+    "country": "Australia",
+    "role": "Bowler",
+    "rating": {
+      "batting_hand": "left-hand",
+      "bowling_hand": "left-hand-fast",
+      "price": 900000
+    }
+  },
+  {
+    "id": 19,
+    "cricketer_name": "Devon Conway",
+    "player_image": "https://m.greaterkashmir.com/sortd-service/imaginary/v22-01/jpg/large/high?url=Z3JlYXRlcmthc2htaXItc29ydGQtcHJvLXByb2Qtc29ydGQvbWVkaWE0MWFhYzhiMC1mOWY1LTExZWYtYjVlNS0wMTRlNTY0NzI4MmUuanBn",
+    "country": "New Zealand",
+    "role": "Batsman",
+    "rating": {
+      "batting_hand": "left-hand",
+      "bowling_hand": "none",
+      "price": 750000
+    }
+  },
+  {
+    "id": 20,
+    "cricketer_name": "Rishabh Pant",
+    "player_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ55peCy8P2QW1l0LpEm-Z3V4AttWjf4e2kg&s",
+    "country": "India",
+    "role": "Wicketkeeper-Batsman",
+    "rating": {
+      "batting_hand": "left-hand",
+      "bowling_hand": "none",
+      "price": 890000
+    }
+  }
+]
