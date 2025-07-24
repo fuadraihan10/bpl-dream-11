@@ -44,7 +44,7 @@ function MainSec({ setCoins , coins, selectedPlayers, setSelectedPlayers }) {
         <div>
             {
                 selectedPlayers.map((player, index) => (
-                    <SelectedPlayers key={index} player={player} />
+                    <SelectedPlayers key={index} player={player} setSelectedPlayers={setSelectedPlayers} selectedPlayers={selectedPlayers} />
                 ))}
         </div>
     </div>

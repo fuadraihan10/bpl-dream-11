@@ -2,9 +2,9 @@ import img from "../../assets/assets/bg-shadow.png";
 
 function Newslatter() {
     return (
-        <div className="border border-gray-200 rounded-lg shadow-md p-4 m-6 max-w-screen-2xl mx-auto mt-10">
+        <div className="border border-gray-200 rounded-lg shadow-md p-4 m-6 max-w-screen-2xl mx-auto mt-10 relative z-10 top-50">
             <div
-                className="relative gap-6 text-center py-18 justify-center flex flex-col border border-gray-300 rounded-lg p-6"
+                className="relative gap-6 text-center py-18 justify-center flex bg-white flex-col border border-gray-300 rounded-lg p-6"
                 style={{
                     backgroundImage: `url(${img})`,
                     backgroundSize: "cover",
@@ -25,10 +25,7 @@ function Newslatter() {
                     />
                     <button
                         type="submit"
-                        className="text-black text-2xl font-semibold p-3 rounded-lg"
-                        style={{
-                            backgroundImage: "linear-gradient(to bottom right, purple 1%, #FBBF24 99% opacity: 0.5)"
-                        }}
+                        className="text-gray-400 text-2xl font p-3 rounded-lg bg-amber-200"
                     >
                         Subscribe
                     </button>

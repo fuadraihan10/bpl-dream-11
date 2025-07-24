@@ -1,5 +1,5 @@
 import { MdOutlineDelete } from "react-icons/md";
-function SelectedPlayers({ player}) {
+function SelectedPlayers({ player, setSelectedPlayers, selectedPlayers }) {
     console.log(player);
      return (
         <div className="flex flex-row items-center justify-between bg-white p-4 px-3 py-7 rounded-lg shadow-md mb-4">
@@ -11,7 +11,11 @@ function SelectedPlayers({ player}) {
                 </div>
                 <h2>{player.rating.price} $</h2>
             </div>
-           <MdOutlineDelete />
+            <button onClick={() => {
+                const updatedPlayers = selectedPlayers.filter(p => p.cricketer_name !== player.cricketer_name);
+                setSelectedPlayers(updatedPlayers);
+            }}><MdOutlineDelete /></button>
+           
         </div>
      );
  }

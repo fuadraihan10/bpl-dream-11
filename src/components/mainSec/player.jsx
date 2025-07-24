@@ -1,4 +1,4 @@
-
+  import { toast } from 'react-toastify';
 
 function Player({ coins,setCoins,player, selectedPlayers, setSelectedPlayers }) {
     return (
@@ -43,18 +43,18 @@ function Player({ coins,setCoins,player, selectedPlayers, setSelectedPlayers }) 
                     <button onClick={() => {
                         if (!selectedPlayers.includes(player)) {
                             if (selectedPlayers.length >= 6) {
-                                alert("You can only select up to 6 players");
+                                toast.error("You can only select up to 6 players");
                                 return;
                             }
                             if (coins < player.rating.price) {
-                                alert("Insufficient coins to select this player");
+                                toast.error("Insufficient coins to select this player");
                                 return;
                             }
                             setCoins(coins - player.rating.price);
                             setSelectedPlayers([...selectedPlayers, player]);
                         }
                         else {
-                            alert("Player already selected");
+                            toast.error("Player already selected");
                         }
                     }} className="bg-white border border-gray-200 text-black px-4 py-1.5 rounded-lg text-sm font-medium transition-colors">
                         Choose Player
