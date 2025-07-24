@@ -1,6 +1,6 @@
-import React from 'react';
 
-function Player({ player, selectedPlayers, setSelectedPlayers }) {
+
+function Player({ coins,setCoins,player, selectedPlayers, setSelectedPlayers }) {
     return (
         <div className="flex flex-col bg-white rounded-xl overflow-hidden border border-gray-300 shadow-sm hover:shadow-md transition-shadow">
             <div className="relative w-full aspect-[4/3] overflow-hidden">
@@ -42,6 +42,15 @@ function Player({ player, selectedPlayers, setSelectedPlayers }) {
                     <div className="text-gray-800 font-bold">price: {player.rating.price}</div>
                     <button onClick={() => {
                         if (!selectedPlayers.includes(player)) {
+                            if (selectedPlayers.length >= 6) {
+                                alert("You can only select up to 6 players");
+                                return;
+                            }
+                            if (coins < player.rating.price) {
+                                alert("Insufficient coins to select this player");
+                                return;
+                            }
+                            setCoins(coins - player.rating.price);
                             setSelectedPlayers([...selectedPlayers, player]);
                         }
                         else {

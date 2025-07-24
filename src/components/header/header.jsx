@@ -3,17 +3,15 @@ import logo from '/src/assets/assets/logo.png'
 import coin from '/src/assets/assets/dollar.png'
 import bg from '/src/assets/assets/bg-shadow.png'
 import bannner from '/src/assets/assets/banner-main.png'
-import { useState } from 'react'
 
 
 
 
-function Header() {
+function Header({ coins, setCoins }) {
 
-  const [coins, setCoins] = useState(0);
 
   function handleClaimFreeCredit() {
-    setCoins(coins + 1000);
+    setCoins(coins + 1000000);
   }
 
   return (

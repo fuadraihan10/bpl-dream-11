@@ -8,13 +8,13 @@ import { useState } from 'react';
 function App() {
 
   const [selectedPlayers, setSelectedPlayers] = useState([]);
-  
+  const [coins, setCoins] = useState(0);
 
   return (
     <>
       {/*---------- header -------------- */}
-      <Header></Header>
-      <MainSec selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} />
+      <Header coins={coins} setCoins={setCoins} />
+      <MainSec coins={coins} setCoins={setCoins} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} />
     </>
   )
 }
