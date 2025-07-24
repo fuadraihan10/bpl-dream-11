@@ -17,6 +17,7 @@ function SelectedPlayers({ player, setSelectedPlayers, selectedPlayers }) {
             }}><MdOutlineDelete /></button>
            
         </div>
+        
      );
  }
 

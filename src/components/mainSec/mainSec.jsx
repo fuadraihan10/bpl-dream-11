@@ -41,13 +41,14 @@ function MainSec({ setCoins , coins, selectedPlayers, setSelectedPlayers }) {
                 <Player key={index} player={player} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} coins={coins} setCoins={setCoins} />
             ))}
         </div>
-        <div>
+        <div className={` ${activeId === "available" ? "hidden" : ""}`}>
             {
                 selectedPlayers.map((player, index) => (
                     <SelectedPlayers key={index} player={player} setSelectedPlayers={setSelectedPlayers} selectedPlayers={selectedPlayers} />
                 ))}
+                <button id="available" onClick={availableFunc} className={'md:text-2xl bg-amber-300 text-sm text-black px-6 py-3 rounded-2xl  border border-gray-200 md:px-4 md:py-2 '}>Add More Players</button>
+            </div>
         </div>
-    </div>
   );
 }
 
