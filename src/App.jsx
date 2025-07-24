@@ -2,6 +2,7 @@
 import './App.css'
 import Header from './components/header/header.jsx'
 import MainSec from './components/mainSec/mainSec.jsx'
+import Newslatter from './components/Newslatter/Newslatter.jsx'
 import { useState } from 'react';
 
 
@@ -15,6 +16,7 @@ function App() {
       {/*---------- header -------------- */}
       <Header coins={coins} setCoins={setCoins} />
       <MainSec coins={coins} setCoins={setCoins} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} />
+      <Newslatter></Newslatter>
     </>
   )
 }
