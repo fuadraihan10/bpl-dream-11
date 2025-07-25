@@ -18,7 +18,7 @@ function MainSec({ setCoins , coins, selectedPlayers, setSelectedPlayers, email 
         if (localSelectedPlayers){
             setSelectedPlayers(JSON.parse(localSelectedPlayers))
         }
-    }}, []);
+    }}, [setEmail,setSelectedPlayers]);
 
     useEffect(() => {
         fetch("https://raw.githubusercontent.com/fuadraihan10/new-year-new-me/refs/heads/main/data.json")
