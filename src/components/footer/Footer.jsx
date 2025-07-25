@@ -1,6 +1,22 @@
 import img from "../../assets/assets/logo-footer.png";
+import React, { useState } from "react";
+import { toast } from 'react-toastify';
+import { useEffect } from "react";
 
 function Footer() {
+        function isValidEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+    useEffect(() => {
+        const storedEmail = localStorage.getItem("email");
+        if (storedEmail) {
+            setEmail(storedEmail);
+        }
+    }
+    , []);
+
+    const [email, setEmail] = useState("");
     return (
         <footer className="bg-gray-900 gap-20 items-center flex flex-col pt-60 text-white py-4  w-full">
             <img src={img} alt="" />
@@ -12,32 +28,49 @@ function Footer() {
                 </div>
                 <div className="flex flex-col gap-4 ">
                     <h1 className="text-3xl">Quick links</h1>
-                    <ul  className="text-gray-500 text-xl list-disc list-inside">
+                    <ul className="text-gray-500 text-xl list-disc list-inside">
                         <li>Home</li>
                         <li>About</li>
                         <li>Services</li>
-                        <li>Contact</li>    
+                        <li>Contact</li>
                     </ul>
                 </div>
                 <div className="flex flex-col gap-4">
                     <h1 className="text-3xl">Subscribe</h1>
                     <p className="max-w-80 text-xl text-gray-500">Subscribe to our newsletter for the latest updates.</p>
                     <form className="flex flex-row items-center justify-center">
-                    <input
-                        type="email"
-                        placeholder="Enter your email"
-                        className="text-xl bg-white w-full md:w-[300px] text-black rounded-r-none lg:w-[400px] p-3 border  rounded-lg"
-                    />
-                    <button
-                        type="submit"
-                        className="text-gray-400 rounded-l-none text-xl font p-3 rounded-lg bg-amber-200"
-                    >
-                        Subscribe
-                    </button>
-                </form>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Enter your email"
+                            className="text-xl bg-white w-full md:w-[300px] text-black rounded-r-none lg:w-[400px] p-3 border  rounded-lg"
+                        />
+                        <button
+                            type="submit"
+                            onClick={(e) => {
+                                e.preventDefault();
+
+                                if (!email) {
+                                    toast.error("Please enter an email address");
+                                    return;
+                                }
+                                if (isValidEmail(email)) {
+                                    toast.success("Subscribed successfully!");
+                                    setEmail("");
+                                    localStorage.setItem("email", email);
+                                } else {
+                                    toast.error("Please enter a valid email address.");
+                                }
+                            }}
+                            className="text-gray-400 rounded-l-none text-xl font p-3 rounded-lg bg-amber-200"
+                        >
+                            Subscribe
+                        </button>
+                    </form>
                 </div>
             </div>
-                        <hr className="border-gray-700 w-full py-2" />
+            <hr className="border-gray-700 w-full py-2" />
             <p className="text-gray-400">@2024 Your Company All Rights Reserved.</p>
         </footer>
     );

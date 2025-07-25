@@ -3,13 +3,25 @@ import { useEffect } from "react";
 import Player from "./player";
 import SelectedPlayers from "./SelectedPlayers";
 
-function MainSec({ setCoins , coins, selectedPlayers, setSelectedPlayers }) {
+function MainSec({ setCoins , coins, selectedPlayers, setSelectedPlayers, email , setEmail }) {
 
     const [activeId, setActiveId] = useState("available");
     const [players, setPlayers] = useState([]);
 
+
     useEffect(() => {
-        fetch("../../../public/data.json")
+    const storedEmail = localStorage.getItem("email");
+    if (storedEmail) {
+        console.log("Email found in localStorage:", storedEmail);
+        setEmail(storedEmail);
+        const localSelectedPlayers = localStorage.getItem("selectedPlayers")
+        if (localSelectedPlayers){
+            setSelectedPlayers(JSON.parse(localSelectedPlayers))
+        }
+    }}, []);
+
+    useEffect(() => {
+        fetch("/src/data.json")
             .then((response) => response.json())
             .then((data) => {
                 setPlayers(data);
@@ -38,15 +50,15 @@ function MainSec({ setCoins , coins, selectedPlayers, setSelectedPlayers }) {
         </div>
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 ${activeId === "selected" ? "hidden" : ""}`}>
             {players.map((player, index) => (
-                <Player key={index} player={player} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} coins={coins} setCoins={setCoins} />
+                <Player key={index} email={email} player={player} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} coins={coins} setCoins={setCoins} />
             ))}
         </div>
         <div className={` ${activeId === "available" ? "hidden" : ""}`}>
             {
                 selectedPlayers.map((player, index) => (
-                    <SelectedPlayers key={index} player={player} setSelectedPlayers={setSelectedPlayers} selectedPlayers={selectedPlayers} />
+                    <SelectedPlayers key={index} email={email} player={player} setSelectedPlayers={setSelectedPlayers} selectedPlayers={selectedPlayers} />
                 ))}
-                <button id="available" onClick={availableFunc} className={'md:text-2xl bg-amber-300 text-sm text-black px-6 py-3 rounded-2xl  border border-gray-200 md:px-4 md:py-2 '}>Add More Players</button>
+                <button id="available"  onClick={availableFunc} className={'md:text-2xl bg-amber-300 text-sm text-black px-6 py-3 rounded-2xl  border border-gray-200 md:px-4 md:py-2 '}>Add More Players</button>
             </div>
         </div>
   );

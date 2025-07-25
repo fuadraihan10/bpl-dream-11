@@ -1,6 +1,6 @@
   import { toast } from 'react-toastify';
 
-function Player({ coins,setCoins,player, selectedPlayers, setSelectedPlayers }) {
+function Player({ coins,setCoins,player, selectedPlayers, setSelectedPlayers,email }) {
     return (
         <div className="flex flex-col bg-white rounded-xl overflow-hidden border border-gray-300 shadow-sm hover:shadow-md transition-shadow">
             <div className="relative w-full aspect-[4/3] overflow-hidden">
@@ -28,7 +28,7 @@ function Player({ coins,setCoins,player, selectedPlayers, setSelectedPlayers }) 
                 </div>
                 <hr />
 
-                <h1 className="text-sm text-gray-600 text-xl font-bold">Rating</h1>
+                <h1 className="text-sm text-gray-600 md:text-xl font-bold">Rating</h1>
                 <div className="flex flex-row  justify-between space-y-1">
                     <div>
                         <div className="text-sm font-medium text-gray-800">{player.rating.batting_hand}</div>
@@ -50,8 +50,12 @@ function Player({ coins,setCoins,player, selectedPlayers, setSelectedPlayers }) 
                                 toast.error("Insufficient coins to select this player");
                                 return;
                             }
+                            toast.success(`${player.cricketer_name} selected successfully!`);
                             setCoins(coins - player.rating.price);
                             setSelectedPlayers([...selectedPlayers, player]);
+                            if (email) {
+                                localStorage.setItem("selectedPlayers", JSON.stringify([...selectedPlayers, player]));
+                            }
                         }
                         else {
                             toast.error("Player already selected");
