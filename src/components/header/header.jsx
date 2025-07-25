@@ -6,7 +6,7 @@ import bannner from '/src/assets/assets/banner-main.png';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
 
-function Header({ coins, setCoins }) {
+function Header({ coins, setCoins , email}) {
   useEffect(() => {
     const storedCoins = localStorage.getItem("coins");
     if (storedCoins) {
@@ -16,9 +16,13 @@ function Header({ coins, setCoins }) {
 
   function handleClaimFreeCredit() {
     const newCoins = coins + 1000000;
-    setCoins(newCoins);
+    if (email){
+      
+      localStorage.setItem("coins", newCoins);
+    }
+    setCoins(newCoins)
     toast.success("You have claimed 1,000,000 free credits!");
-    localStorage.setItem("coins", newCoins); // ✅ Save to localStorage
+    
   }
 
   return (

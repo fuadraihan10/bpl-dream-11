@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/header/Header.jsx';
-import MainSec from './components/mainSec/mainSec.jsx';
+import MainSec from './components/mainSec/MainSec.jsx';
 import Newslatter from './components/Newslatter/Newslatter.jsx';
 import Footer from './components/footer/Footer.jsx';
 import { useState } from 'react';
@@ -16,7 +16,7 @@ function App() {
     <>
 
       {/*---------- header -------------- */}
-      <Header coins={coins} setCoins={setCoins}/>
+      <Header coins={coins} setCoins={setCoins} email={email}/>
       <MainSec
         coins={coins}
         setCoins={setCoins}
