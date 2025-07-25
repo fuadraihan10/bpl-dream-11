@@ -12,7 +12,7 @@ function Header({ coins, setCoins , email}) {
     if (storedCoins) {
       setCoins(parseInt(storedCoins)); 
     }
-  }, []);
+  }, [setCoins]);
 
   function handleClaimFreeCredit() {
     const newCoins = coins + 1000000;
