@@ -21,7 +21,7 @@ function MainSec({ setCoins , coins, selectedPlayers, setSelectedPlayers, email 
     }}, []);
 
     useEffect(() => {
-        fetch("/src/data.json")
+        fetch("../../../public/data.json")
             .then((response) => response.json())
             .then((data) => {
                 setPlayers(data);

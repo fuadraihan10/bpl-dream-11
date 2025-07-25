@@ -52,6 +52,7 @@ function Player({ coins,setCoins,player, selectedPlayers, setSelectedPlayers,ema
                             }
                             toast.success(`${player.cricketer_name} selected successfully!`);
                             setCoins(coins - player.rating.price);
+                            localStorage.setItem("coins", coins - player.rating.price);
                             setSelectedPlayers([...selectedPlayers, player]);
                             if (email) {
                                 localStorage.setItem("selectedPlayers", JSON.stringify([...selectedPlayers, player]));
