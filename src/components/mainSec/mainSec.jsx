@@ -21,7 +21,7 @@ function MainSec({ setCoins , coins, selectedPlayers, setSelectedPlayers, email 
     }}, [setEmail,setSelectedPlayers]);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/fuadraihan10/new-year-new-me/refs/heads/main/data.json")
+        fetch("../../../public/data.json")
             .then((response) => response.json())
             .then((data) => {
                 setPlayers(data);
