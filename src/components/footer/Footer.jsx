@@ -18,7 +18,7 @@ function Footer() {
 
     const [email, setEmail] = useState("");
     return (
-        <footer className="bg-gray-900 gap-20 items-center flex flex-col pt-60 text-white py-4  w-full">
+        <footer className="bg-[#06091a] gap-24 items-center flex flex-col pt-60 text-white py-4  w-full">
             <img src={img} alt="" />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-screen-2xl w-full px-4">
@@ -63,7 +63,7 @@ function Footer() {
                                     toast.error("Please enter a valid email address.");
                                 }
                             }}
-                            className="text-gray-400 rounded-l-none text-xl font p-3 rounded-lg bg-amber-200"
+                            className="rounded-l-none  text-black text-lg font p-3 rounded-lg bg-gradient-to-br to-[#de84b5] from-[#f9cf5f]"
                         >
                             Subscribe
                         </button>
@@ -71,7 +71,7 @@ function Footer() {
                 </div>
             </div>
             <hr className="border-gray-700 w-full py-2" />
-            <p className="text-gray-400">@2024 Your Company All Rights Reserved.</p>
+            <p className="text-gray-400">{new Date().getFullYear()} Your Company All Rights Reserved.</p>
         </footer>
     );
 }

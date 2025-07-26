@@ -6,7 +6,7 @@ import bannner from '/src/assets/assets/banner-main.png';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
 
-function Header({ coins, setCoins , email}) {
+function Header({ coins, setCoins , email , activeId}) {
   useEffect(() => {
     const storedCoins = localStorage.getItem("coins");
     if (storedCoins) {
@@ -35,11 +35,11 @@ function Header({ coins, setCoins , email}) {
         {/* ---- Nav Items Container ---- */}
         <div className="flex items-center">
           {/* ---- Nav Items ---- */}
-          <div className="hidden md:flex space-x-8 items-center mr-8">
+          <div className="hidden md:flex gap-18 items-center mr-8">
             <p className="text-gray-500 hover:text-gray-700 cursor-pointer">Home</p>
-            <p className="text-gray-500 hover:text-gray-700 cursor-pointer">Team</p>
-            <p className="text-gray-500 hover:text-gray-700 cursor-pointer">Matches</p>
-            <p className="text-gray-500 hover:text-gray-700 cursor-pointer">Contact</p>
+            <p className="text-gray-500 hover:text-gray-700 cursor-pointer">Fixture</p>
+            <p className="text-gray-500 hover:text-gray-700 cursor-pointer">Teams</p>
+            <p className="text-gray-500 hover:text-gray-700 cursor-pointer">Schedule</p>
           </div>
 
           {/* ---- Coins ---- */}
@@ -56,12 +56,14 @@ function Header({ coins, setCoins , email}) {
           <img className="w-20 md:w-64" src={bannner} alt="cricket" />
           <p className="text-md lg:text-4xl font-bold">Assemble Your Ultimate Dream 11 Cricket Team</p>
           <p className="text-sm md:text-2xl font-semibold text-gray-400">Beyond Boundaries Beyond Limits</p>
-          <button
-            onClick={handleClaimFreeCredit}
-            className="bg-yellow-300 text-black sm:py-2 sm:px-4 py-1 px-2 mt-2 rounded"
-          >
-            Claim Free Credit
-          </button>
+              <div className={`rounded-xl border ${activeId === "available" ? "border-[#e7fe29]" : "border-white"}`}>
+                  <button
+                  onClick={handleClaimFreeCredit}
+                  className={`${activeId === "available" ? "bg-[#e7fe29]" : "bg-gradient-to-br from-[#de84b5] to-[#f9cf5f]"} text-black sm:py-3 sm:px-5 py-1 px-2 m-2 rounded-xl`}
+                >
+                  Claim Free Credit
+                </button>
+              </div>
         </div>
         <img className="w-full opacity-50" src={bg} alt="background" />
       </div>

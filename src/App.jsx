@@ -11,12 +11,13 @@ function App() {
   const [selectedPlayers, setSelectedPlayers] = useState([]);
   const [coins, setCoins] = useState(0);
   const [email, setEmail] = useState("");
+  const [activeId, setActiveId] = useState("available");
 
   return (
     <>
 
       {/*---------- header -------------- */}
-      <Header coins={coins} setCoins={setCoins} email={email}/>
+      <Header coins={coins} setCoins={setCoins} email={email}  activeId={activeId}/>
       <MainSec
         coins={coins}
         setCoins={setCoins}
@@ -24,6 +25,8 @@ function App() {
         setSelectedPlayers={setSelectedPlayers}
         email={email}
         setEmail={setEmail}
+        activeId={activeId}
+        setActiveId={setActiveId}
       />
       <ToastContainer />
       <Newslatter selectedPlayers={selectedPlayers} />

@@ -2,6 +2,7 @@ import img from "../../assets/assets/bg-shadow.png";
 import { toast } from 'react-toastify';
 import React, { useEffect, useState } from "react";
 
+
 function Newslatter({selectedPlayers}) {
     function isValidEmail(email) {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,9 +19,9 @@ function Newslatter({selectedPlayers}) {
     , []);
 
     return (
-        <div className="border border-gray-200 rounded-lg shadow-md p-4 m-6 max-w-screen-2xl mx-auto mt-10 relative z-10 top-50">
+        <div className="border border-gray-200 bg-[#FFFFFF4D] rounded-lg shadow-md p-5 m-6 max-w-screen-2xl mx-auto mt-10 relative z-10 top-50">
             <div
-                className="relative gap-6 text-center py-18 justify-center flex bg-white flex-col border border-gray-300 rounded-lg p-6"
+                className="relative gap-4 text-center py-22 justify-center flex bg-white flex-col border border-gray-300 rounded-lg p-6"
                 style={{
                     backgroundImage: `url(${img})`,
                     backgroundSize: "cover",
@@ -29,7 +30,7 @@ function Newslatter({selectedPlayers}) {
                     opacity: 0.95, // Optional: adjust visual blending
                 }}
             >
-                <h2 className="text-5xl font-bold">Subscribe to our Newsletter</h2>
+                <h2 className="text-4xl font-bold">Subscribe to our Newsletter</h2>
                 <p className="text-2xl bold text-gray-600">
                     Get the latest updates and news right in your inbox!
                 </p>
@@ -45,7 +46,8 @@ function Newslatter({selectedPlayers}) {
                     />
                     <button
                         type="submit"
-                        className="text-gray-400 text-2xl font p-3 rounded-lg bg-amber-200"
+                        className="text-black text-lg font p-3 rounded-lg bg-gradient-to-br from-[#de84b5] to-[#f9cf5f]"
+
                         onClick={(e) => {
                             e.preventDefault();
 
